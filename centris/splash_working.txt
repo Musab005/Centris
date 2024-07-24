@@ -1,0 +1,335 @@
+import json
+import scrapy
+from scrapy.selector import Selector
+from scrapy_splash import SplashRequest
+
+
+# ctrl + alt + l
+# to format json file on pycharm
+
+
+class ListingsSpider(scrapy.Spider):
+    name = "listings"
+    allowed_domains = ["www.centris.ca"]
+
+    # first page on the pagination index
+    position = {
+        "startPosition": 0
+    }
+
+    # sort number for "Recent Publications"
+    dropdown_sort = {
+        "sort": 3
+    }
+
+    # this is a dict of a dict.
+    sorted_listings_dict = {}
+    # sorted_listings_dict['item1'] = {'attribute1': 'value1', 'attribute2': 'value2', 'attribute3': 'value3'}
+    curr_key = 1
+    rand_key = 100
+    # splash_unsorted_list = []
+    splash_unsorted_dict = {}
+    # splash_unsorted_dict['item1'] = {'attribute1': 'value1', 'attribute2': 'value2', 'attribute3': 'value3'}
+    result = {}
+    # result['item1'] = {'attribute1': 'value1', 'attribute2': 'value2', 'attribute3': 'value3'}
+
+    summary_script = '''
+        function main(splash, args)
+            splash:on_request(function(request)
+                if request.url:find('css') then
+                    request.abort()
+                end
+            end)
+            splash.images_enabled = false
+            splash.js_enabled = false
+
+            splash:set_viewport_full()
+            splash:go(splash.args.url)
+            splash:wait(5)
+
+            return splash:html()
+        end
+    '''
+
+    # code starts executing here
+    def start_requests(self):
+        # This variable contains the request payload copied from the XHR request UpdateQuery. It contains the filters.
+        query = {
+            "query": {
+                "UseGeographyShapes": 0,
+                "Filters": [
+                    {
+                        "MatchType": "GeographicArea",
+                        "Text": "Montréal (Island)",
+                        "Id": "GSGS4621"
+                    }
+                ],
+                "FieldsValues": [
+                    {
+                        "fieldId": "GeographicArea",
+                        "value": "GSGS4621",
+                        "fieldConditionId": "",
+                        "valueConditionId": ""
+                    },
+                    {
+                        "fieldId": "Category",
+                        "value": "Residential",
+                        "fieldConditionId": "",
+                        "valueConditionId": ""
+                    },
+                    {
+                        "fieldId": "SellingType",
+                        "value": "Rent",
+                        "fieldConditionId": "",
+                        "valueConditionId": ""
+                    },
+                    {
+                        "fieldId": "Rooms",
+                        "value": "2",
+                        "fieldConditionId": "IsResidentialNotLot",
+                        "valueConditionId": ""
+                    },
+                    {
+                        "fieldId": "BathPowderRooms",
+                        "value": "2+",
+                        "fieldConditionId": "IsResidentialNotLot",
+                        "valueConditionId": ""
+                    },
+                    {
+                        "fieldId": "LandArea",
+                        "value": "SquareFeet",
+                        "fieldConditionId": "IsLandArea",
+                        "valueConditionId": ""
+                    },
+                    {
+                        "fieldId": "RentPrice",
+                        "value": 1750,
+                        "fieldConditionId": "ForRent",
+                        "valueConditionId": ""
+                    },
+                    {
+                        "fieldId": "RentPrice",
+                        "value": 2500,
+                        "fieldConditionId": "ForRent",
+                        "valueConditionId": ""
+                    }
+                ]
+            },
+            "isHomePage": True
+        }
+
+        # This method makes the API request to the UpdateQuery endpoint.
+        yield scrapy.Request(
+            url="https://www.centris.ca/property/UpdateQuery",  # url to send the request to
+            method='POST',
+            # body = payload. Need to send as string so convert the json object to string  using `dumps`
+            body=json.dumps(query),
+            headers={
+                'Content-Type': 'application/json'
+            },
+            callback=self.update_sort  # go to this method after execution completes
+        )
+
+    def update_sort(self, response):
+        yield scrapy.Request(
+            url="https://www.centris.ca/property/UpdateSort",
+            method="POST",
+            body=json.dumps(self.dropdown_sort),  # payload is the sort number for "Recent publications"
+            headers={
+                'Content-Type': 'application/json'
+            },
+            callback=self.get_inscriptions
+        )
+
+    def get_inscriptions(self, response):
+        yield scrapy.Request(
+            url="https://www.centris.ca/Property/GetInscriptions",
+            method="POST",
+            body=json.dumps(self.position),  # payload is the listing number so that it starts from the first page
+            headers={
+                'Content-Type': 'application/json'
+            },
+            callback=self.parse
+        )
+
+    def parse(self, response):
+        # the response is a JSON object:
+        # {
+        #     "d": {
+        #         "Message": "",
+        #         "Result": {
+        #             "html": "..."
+        #         },
+        #         "Succeeded": true
+        #     }
+        # }
+        # convert it to a python dict:
+        # print(type(response_dict))
+        response_dict = json.loads(response.body)
+
+        # we only need the html response
+        html = response_dict.get('d').get('Result').get('html')
+        # we will scrap this html response, so save it as a separate file for easy lookup
+        # with open('centris.html', 'w') as f:
+        #     f.write(html)
+
+        # convert the html to a selector object so that we can use xpath. The html is just a string
+        sel = Selector(text=html)
+        listings = sel.xpath('//div[@class="property-thumbnail-item thumbnailItem col-12 col-sm-6 col-md-4 col-lg-3"]')
+
+        for listing in listings:
+
+            # category (condo/apartment/townhouse)
+            category = listing.xpath('.//span[@class="category"]/div/text()').get()
+            if category is not None:
+                category = category.strip()
+
+            # no. of beds and baths
+            beds = listing.xpath('.//div[@class="cac"]/text()').get()
+            baths = listing.xpath('.//div[@class="sdb"]/text()').get()
+            features = f"{beds} beds, {baths} baths"
+
+            # price in $
+            price = listing.xpath('.//div[@class="price"]/span/text()').get()
+            price = price.replace('\xa0', '').split(' ')
+            f_price = f'${price[0]}'
+
+            # complete address
+            add1 = listing.xpath(".//span[@class='address']/div[1]/text()").get()
+            add2 = listing.xpath(".//span[@class='address']/div[2]/text()").get()
+            add3 = listing.xpath(".//span[@class='address']/div[3]/text()").get()
+            address = f"{add1}, {add2}, {add3}"
+
+            # url that leads to the detailed info about the listing
+            summary_url = listing.xpath(
+                './/div[@class="thumbnail property-thumbnail-feature legacy-reset"]/a/@href').get()
+            abs_summary_url = f'https://www.centris.ca{summary_url}'
+            abs_summary_url = abs_summary_url.replace('fr', 'en')
+
+            # if any(x in address for x in (
+            #         'Chemin Bates', 'Avenue Madison', 'boulevard Décarie', 'Place Northcrest', 'Avenue Lennox',
+            #         'Place des Jardins-des-Vosges', 'Chemin du Golf', 'Avenue des Pins Ouest', 'Rue Cartier')):
+            # if any(x in address for x in 'zzz'):
+            #     pass
+            # else:
+
+            # safely store the key and attributes of the listing in a global dict. The entries of this
+            # dict are sorted with an incremental key value. This order represents the sort criteria
+            # 'recent publications' on the centris website
+            self.sorted_listings_dict[self.curr_key] = \
+                {'category': category, 'features': features, 'city': address,
+                 'price': f_price, 'url': abs_summary_url}
+            # key = next most recent listing
+            self.curr_key += 1
+            # pass this info to splash
+            yield SplashRequest(
+                url=abs_summary_url,
+                endpoint='execute',
+                callback=self.parse_summary,
+                args={
+                    'lua_source': self.summary_script
+                },
+                meta={  # send this argument to the parse_summary method
+                    'features': features,
+                    'price': f_price,
+                    'url': abs_summary_url
+                }
+            )
+
+        count = response_dict.get('d').get('Result').get('count')
+        increment = response_dict.get('d').get('Result').get('inscNumberPerPage')
+
+        if self.position["startPosition"] <= count:
+            self.position["startPosition"] += increment
+            yield scrapy.Request(
+                url="https://www.centris.ca/Property/GetInscriptions",
+                method='POST',
+                body=json.dumps(self.position),
+                headers={
+                    'Content-Type': 'application/json'
+                },
+                callback=self.parse
+            )
+        # else:
+        #     # Iterate over the list
+        #     # for url in self.splash_unsorted_list:
+        #     #     # Check if the item exists in the values of the dictionary
+        #     #     for key, value in self.sorted_listings_dict.items():
+        #     #         if value['url'] == url:
+        #     #             self.result[key] = \
+        #     #                 {'category': value['category'], 'features': value['features'], 'city': value['address'],
+        #     #                  'price': value['f_price'], 'url': value['abs_summary_url']}
+        #     #
+        #     # # Sort the keys of the dictionary
+        #     # sorted_keys = sorted(self.result.keys())
+        #     # # Print the dictionary with incremental key order
+        #     # for key in sorted_keys:
+        #     #     yield {
+        #     #         'key': key,
+        #     #         'url': self.result[key]
+        #     #     }
+        #
+        #     # Iterate over the unsorted splash dict that has the unique listing url
+        #     # as key. Address, description as values
+        #     for key, value in self.splash_unsorted_dict.items():
+        #         # Check if the key (i.e. unique url) exists in the values of the original sorted dict
+        #         # if yes, then extract the key number of that url from the original dict,
+        #         # and store this key number with the combined attributes from both dicts into a result dict.
+        #         # 'address' and 'description' is from the splash dict, all other attributes from the original dict
+        #         for key2, value2 in self.sorted_listings_dict.items():
+        #             if value2['url'] == value['url']:
+        #                 # print(f"\n \n \n matched: {value2['url']} = {value['url']} \n \n \n")
+        #                 # self.sorted_listings_dict[self.curr_key] = \
+        #                 #     {'category': category, 'features': features, 'city': address,
+        #                 #      'price': f_price, 'url': abs_summary_url}
+        #                 self.result[key2] = \
+        #                     {'category': value2['category'], 'features': value2['features'],
+        #                      'address': value2['city'], 'price': value2['price'],
+        #                      'description': value['splash_description'], 'url': value['url']}
+        #
+        #     # Sort the keys of the result dictionary
+        #     sorted_keys = sorted(self.result.keys())
+        #     # Print the result dictionary with incremental key order (i.e. most recent publications on centris)
+        #     for key in sorted_keys:
+        #         yield {
+        #             'key': key,
+        #             'values': self.result[key]
+        #         }
+
+    # TODO: brokers url and not all items being scraped???
+
+    def parse_summary(self, response):
+        # meta = {  # send this argument to the parse_summary method
+        #     'features': features,
+        #     'price': f_price,
+        #     'url': abs_summary_url
+        # }
+
+        # retrieve from splash response
+        category = response.xpath('//span[@data-id="PageTitle"]/text()').get()
+        address = response.xpath('//h2[@itemprop="address"]/text()').get()
+        if address is not None:
+            address = response.xpath('//h2[@itemprop="address"]/text()').get().strip()
+        else:
+            address = "empty"
+        area = response.xpath('//*[@id="overview"]/div[3]/div[1]/div[6]/div[2]/div[2]/span/text()').get()
+        description = response.xpath("//div[@itemprop='description']/text()").get()
+        if description is not None:
+            description = response.xpath("//div[@itemprop='description']/text()").get().strip()
+        else:
+            description = "empty"
+        # safely store the url, address and description in a global dict with random keys. not
+        # interested in the key number for this dict
+        # self.splash_unsorted_dict[self.rand_key] = \
+        #     {'url': response.request.meta['url'], 'splash_description': description}
+        # self.rand_key += 1
+
+        yield {
+            'category': category,
+            'address': address,
+            'features': response.request.meta['features'],
+            'price': response.request.meta['price'],
+            'area': area,
+            'description': description,
+            'summary_url': response.request.meta['url']
+        }

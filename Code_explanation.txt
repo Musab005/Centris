@@ -1,0 +1,69 @@
+start env from anaconda 3, then on cmd do this:
+cd into C:\Users\musab\anaconda3\envs
+scrapy startproject centris
+cd centris
+scrapy genspider listings www.centris.ca
+
+How does the Centris website work:
+1) After disabling javascript, the website didn't load. Therefore, have to use Splash or Selenium.
+2) Check if the website has a hidden API. Got to inspect -> networks -> XHR (xml http requests)
+    XHR is a way of communication between the client (browser) and the server.
+    The server sends to the client a json object instead of a html markup.
+    From the main page of centris, put in your search filters, clear the network log, and click search.
+    The "Preview" tab of a XHR request shows what the server returns to the browser
+3) Since the website works with XHR requests, we won't use splash or selenium. Instead,
+we will use API requests to retrieve the listings and then scrap them.
+4) If the Content-type is application/json on the xhr request, that means the payload should be sent as json.
+5) On postman, first send a request to the UpdateQuery endpoint and then to getInscriptions endpoint
+to retrieve the exact listings you filtered out.
+6) For some reason, the update query endpoint always returns the `fr` url.
+
+Since we need to send a POST request, we will overwrite the `start_requests` function. Hence, remove the
+`start_urls` default variable.
+
+Go to the updateQuery xhr request and copy the request payload. Use a JSON formatter.
+
+aaaa here
+
+To extract summary page, check if we need splash or not. Uptil now we were only extracting from the listings pages,
+and we checked at the beginning that the listing page doesn't work with javascript. Now since the summary page is at
+a different url, we need to check for javascript again. All the pagination pages of the listings were under the same url.
+
+There were some xhr requests when going from the listings page to the summary page. However, none of them had
+a response that included the "description" of the listing and other listing details. Hence, we will use Splash.
+
+To run code with splash, need to activate docker first
+
+
+The first API request will be to the UpdateQuery endpoint as to define our search criteria. For
+this API request, we need to define the necessary payload as a "query" variable. Then define
+the "yield scrapy.Request(args)" function with args "url", "method", "body" (known as payload, which is
+the query variable we defined before), "headers" which will state that the payload is a JSON object, and\
+"callback" which will tell what function to go to after execution completes.
+
+After the UpdateQuery call executes, we will jump to the UpdateSort method as defined in the callback
+variable. We will just have one function "yield scrapy.Request(args)" inside this method as the payload
+variable "dropdown_sort" was already defined as a global variable at the top. Inside the yield function,
+we will define the update sort url, method, body = payload, headers, and a callback to the
+getInscriptions method to finally retrieve the listings.
+
+The getInscriptions method is also very simple. It will just contain a single yield function with
+the same variables used before. For body (payload), we will use the global variable "position". For
+callback, we will go to self.parse to finally parse the result.
+
+In the parse method, we will first retrieve the response as a JSON object by
+"response_dict = json.loads(response.body)". Then, to extract the html code of the
+ webpage from this response, we will head to the centris webpage, inside the XHR getInscriptions method,
+ see the "Preview" tab which shows the response of this API call. From the preview tab, it is easily
+ identified that the html code is contained in response_dict.get('d').get('Result').get('html'). Then
+ we contain the html code into a container using "sel = Selector(text=html)". Then, we use xpath
+ to get a list of all the listings on the webpage. Then, we loop over the listings and strip the
+ desired data. After the loop, we check if there are more webpages containing listings by
+ getting the total listings and the listings on the current page from the preview tab
+ by doing "        count = response_dict.get('d').get('Result').get('count')
+        increment = response_dict.get('d').get('Result').get('inscNumberPerPage')"
+ We check this against our global variable "position" and hence decide if there are more web pages
+ to scrap.
+
+Splash script...
+

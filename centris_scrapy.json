@@ -1,0 +1,653 @@
+[
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1080, Rue Sainte-Élisabeth, app. 4, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/9849336?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "440, Rue De La Gauchetière Est, app. 210, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2300",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/13659202?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5077, Rue Paré, app. 109, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2200",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/20793552?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "112, Chemin de la Pointe-Nord, app. 709, Montréal (Verdun/Île-des-Soeurs), Quartier Île-des-Soeurs",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-verdun-ile-des-soeurs/22863399?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "9660, Rue William-Fleming, app. 102, Montréal (LaSalle), None",
+    "price": "$1975",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/28910539?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1288, Rue Saint-Antoine Ouest, app. 5103, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/23202431?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5150, Rue Buchan, app. 3502, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2300",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/15352261?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1400, Avenue des Pins Ouest, app. 1302, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$2400",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/13996225?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "2100, Rue Chomedey, app. 202, Montréal (Ville-Marie), Quartier Centre Ouest",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/27756158?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1150, boulevard René-Lévesque Est, app. 413, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2200",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/26445752?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "7028, Rue Marie-Rollet, app. 2B, Montréal (LaSalle), None",
+    "price": "$2100",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/24600461?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "315, Rue Richmond, app. 212, Montréal (Le Sud-Ouest), Quartier Griffintown",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/23810350?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "855, Rue Irène, app. 471, Montréal (Le Sud-Ouest), Quartier Saint-Henri",
+    "price": "$2395",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/12872469?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "777, Rue Gosford, app. 404, Montréal (Ville-Marie), Quartier Vieux-Montréal",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/16025028?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6900, boulevard Newman, app. 507, Montréal (LaSalle), None",
+    "price": "$2100",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/28141761?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6728, Rue D'Iberville, Montréal (Rosemont/La Petite-Patrie), Quartier La Petite-Patrie",
+    "price": "$2495",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-rosemont-la-petite-patrie/17326098?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "2151, Rue Léger, app. 505, Montréal (LaSalle), None",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/24641531?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "350, boulevard De Maisonneuve Ouest, app. 604, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2300",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/20384771?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "98, Rue Charlotte, app. 358, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2400",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/19487541?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "220, Chemin du Golf, app. 208, Montréal (Verdun/Île-des-Soeurs), Quartier Île-des-Soeurs",
+    "price": "$2300",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-verdun-ile-des-soeurs/11020243?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1601, Rue Viola-Desmond, app. 637, Montréal (LaSalle), None",
+    "price": "$2150",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/16060490?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6993, boulevard Décarie, app. 1401, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/18757052?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "3465, Rue Redpath, app. 706, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$2350",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/15297152?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1288, Rue Saint-Antoine Ouest, app. 703, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2495",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/9635316?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1288, Rue Saint-Antoine Ouest, app. 2603, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2250",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/21150324?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6843, Avenue Lamont, Montréal (Le Sud-Ouest), Quartier Ville-Émard",
+    "price": "$2250",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/25770492?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "7871, Rue George, app. 202, Montréal (LaSalle), None",
+    "price": "$2100",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/11534470?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "4659, Rue De La Roche, Montréal (Le Plateau-Mont-Royal), Quartier Le Plateau-Mont-Royal",
+    "price": "$2250",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-plateau-mont-royal/21541270?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5725A, Avenue de l'Esplanade, Montréal (Le Plateau-Mont-Royal), Quartier Mile-End",
+    "price": "$2450",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-plateau-mont-royal/27706804?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1525, Rue Saint-Jacques, app. 1, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2250",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/16488700?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "3465, Chemin de la Côte-des-Neiges, app. 25, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$1750",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/17466307?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "88, Rue Charlotte, app. 804, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2000",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/16817523?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "4141, boulevard LaSalle, app. 301, Montréal (Verdun/Île-des-Soeurs), Quartier Verdun",
+    "price": "$2000",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-verdun-ile-des-soeurs/22090590?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "289, 7e Avenue, Montréal (LaSalle), None",
+    "price": "$2200",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/21601912?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6598, boulevard Saint-Laurent, app. 3, Montréal (Rosemont/La Petite-Patrie), Quartier Petite Italie",
+    "price": "$2200",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-rosemont-la-petite-patrie/25031125?view=Summary"
+  },
+  {
+    "category": "Maison à louer",
+    "features": "2 beds, 2 baths",
+    "address": "332, Rue Trudeau, Montréal (LaSalle), None",
+    "price": "$1975",
+    "url": "https://www.centris.ca/en/maison~a-louer~montreal-lasalle/9644141?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1225, boulevard Robert-Bourassa, app. 2305, Montréal (Ville-Marie), Quartier Centre Ouest",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/16749719?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "3540, Avenue de l'Hôtel-de-Ville, app. 104, Montréal (Le Plateau-Mont-Royal), Quartier Le Plateau-Mont-Royal",
+    "price": "$2150",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-plateau-mont-royal/23806438?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "3445, Rue Drummond, app. 804, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$2350",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/27277695?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5780, Avenue Decelles, app. 307, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2150",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/18284420?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1275, Rue Bélanger, Montréal (Rosemont/La Petite-Patrie), Quartier La Petite-Patrie",
+    "price": "$2250",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-rosemont-la-petite-patrie/11786352?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "4, Place des Jardins-des-Vosges, app. 133, Montréal (Verdun/Île-des-Soeurs), Quartier Île-des-Soeurs",
+    "price": "$2490",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-verdun-ile-des-soeurs/11826745?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6283, Rue Mazarin, Montréal (Le Sud-Ouest), Quartier Ville-Émard",
+    "price": "$2250",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/20667194?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1392, Avenue Overdale, Montréal (Ville-Marie), Quartier Centre Ouest",
+    "price": "$2195",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/19655019?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "101, Rue Peel, app. 1253, Montréal (Le Sud-Ouest), Quartier Griffintown",
+    "price": "$2350",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/13641336?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "4500, Chemin de la Côte-des-Neiges, app. 408, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2325",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/15424027?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "2160, Rue Cartier, app. 203, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/25639461?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1423, Rue Drummond, app. 201, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/27617384?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "7000, Rue Allard, app. 509, Montréal (LaSalle), None",
+    "price": "$2000",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/17543374?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "217, Rue De Lévis, Montréal (Le Sud-Ouest), Quartier Petite-Bourgogne",
+    "price": "$2325",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/16344202?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6281, Rue Mazarin, Montréal (Le Sud-Ouest), Quartier Ville-Émard",
+    "price": "$1850",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/20155514?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "869, Avenue Viger Est, app. 205, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2375",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/12860387?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1251, Rue Ottawa, app. 605, Montréal (Le Sud-Ouest), Quartier Griffintown",
+    "price": "$2329",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/11541780?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "88, Rue Charlotte, app. 102, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/19558736?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6250, Avenue Lennox, app. 102, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$1900",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/24128763?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6250, Avenue Lennox, app. 302, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2100",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/16543946?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "3535, Avenue Papineau, app. 216, Montréal (Le Plateau-Mont-Royal), Quartier Le Plateau-Mont-Royal",
+    "price": "$2400",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-plateau-mont-royal/25301669?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "3550, Rue de la Montagne, app. 108, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/18501232?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "630, Rue William, app. 923, Montréal (Ville-Marie), Quartier La Cité du Multimédia",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/18168545?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6760, boulevard Newman, app. 1209, Montréal (LaSalle), None",
+    "price": "$2290",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/27492499?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6760, boulevard Newman, app. 613, Montréal (LaSalle), None",
+    "price": "$2305",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/28593153?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6760, boulevard Newman, app. 1409, Montréal (LaSalle), None",
+    "price": "$2285",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/21752967?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6760, boulevard Newman, app. 1309, Montréal (LaSalle), None",
+    "price": "$2280",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/24342930?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6760, boulevard Newman, app. 312, Montréal (LaSalle), None",
+    "price": "$2330",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/18059365?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6760, boulevard Newman, app. 413, Montréal (LaSalle), None",
+    "price": "$2345",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/21438302?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "21A, Avenue Strathyre, Montréal (LaSalle), None",
+    "price": "$1800",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/26658367?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1400, Rue Ottawa, app. 120A, Montréal (Le Sud-Ouest), Quartier Griffintown",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/14179042?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "98, Rue Charlotte, app. 454, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$1990",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/27478991?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "7501, Avenue Mountain Sights, app. 304, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2260",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/10829780?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1288, Rue Saint-Antoine Ouest, app. 711, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/22095425?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6280, Place Northcrest, app. 715, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$1790",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/28675666?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6280, Place Northcrest, app. 919, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$1950",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/22537121?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1150, boulevard René-Lévesque Est, app. 1213, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2400",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/17634026?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "4500, Chemin de la Côte-des-Neiges, app. 907, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2450",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/22726814?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1330, Rue Olier, app. 309, Montréal (Le Sud-Ouest), Quartier Griffintown",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-sud-ouest/26912176?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "4400, Rue D'Iberville, app. 101, Montréal (Le Plateau-Mont-Royal), Quartier Le Plateau-Mont-Royal",
+    "price": "$2055",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-le-plateau-mont-royal/27161652?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "88, Rue Charlotte, app. 712, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2350",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/20729797?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1440, Rue Pierce, app. 106-206, Montréal (Ville-Marie), Quartier Centre Ouest",
+    "price": "$1950",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/26136100?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "750, Côte de la Place-d'Armes, app. 72, Montréal (Ville-Marie), Quartier Vieux-Montréal",
+    "price": "$2450",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/14832011?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "3455, Rue Drummond, app. 705, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$2300",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/11936277?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1400, Avenue des Pins Ouest, app. 704, Montréal (Ville-Marie), Quartier Mille Carré Doré",
+    "price": "$2495",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/24756192?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "2805, Chemin Bates, app. 103, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2060",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/24479625?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "6800, Chemin de la Côte-Saint-Luc, app. 709, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Notre-Dame-de-Grâce",
+    "price": "$2175",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/10318952?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "441, Avenue du Président-Kennedy, app. 1903, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/26871974?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5858, Chemin Upper-Lachine, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Notre-Dame-de-Grâce",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/20869143?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5856, Chemin Upper-Lachine, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Notre-Dame-de-Grâce",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/26166586?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1180, Rue De Bleury, app. 1101, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2453",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/16504833?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "4420, Avenue de Kent, Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce), Quartier Côte-des-Neiges",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-cote-des-neiges-notre-dame-de-grace/17819435?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "7070, boulevard Newman, app. 904, Montréal (LaSalle), None",
+    "price": "$2250",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-lasalle/23445484?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1180, Rue De Bleury, app. 801, Montréal (Ville-Marie), Quartier Centre",
+    "price": "$2371",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/23807056?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5050, boulevard de l'Assomption, app. 514, Montréal (Rosemont/La Petite-Patrie), Quartier Cité-Jardin",
+    "price": "$2050",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-rosemont-la-petite-patrie/11680078?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "5050, boulevard de l'Assomption, app. 1201, Montréal (Rosemont/La Petite-Patrie), Quartier Cité-Jardin",
+    "price": "$2300",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-rosemont-la-petite-patrie/18922410?view=Summary"
+  },
+  {
+    "category": "Condo / Appartement à louer",
+    "features": "2 beds, 2 baths",
+    "address": "1700, boulevard René-Lévesque Ouest, app. 202, Montréal (Ville-Marie), Quartier Centre Ouest",
+    "price": "$2500",
+    "url": "https://www.centris.ca/en/condo-appartement~a-louer~montreal-ville-marie/18715866?view=Summary"
+  }
+]
