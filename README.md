@@ -5,6 +5,9 @@ Optionally, a Splash script can be executed to retrieve the detailed information
 To run the Scrapy project:
 
 Install scrapy
+
 Install Anaconda
+
 Activate the anaconda virtual environment: `conda activate {virtual env name}`
+
 run `scrapy crawl listings -o listings.json`
