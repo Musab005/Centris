@@ -189,7 +189,7 @@ class ListingsSpider(scrapy.Spider):
         )
 
     def parse(self, response):
-        # the response is a JSON object:
+        # the response is a JSON object that is interpreted as a String:
         # {
         #     "d": {
         #         "Message": "",
