@@ -7,6 +7,7 @@ from scrapy.utils.log import configure_logging
 from scrapy.crawler import CrawlerRunner
 from twisted.internet import reactor
 import threading
+import tkinter as tk
 
 
 def get_spiders():
@@ -66,7 +67,24 @@ def check_execute_thread():
         app.after(10, check_execute_thread)
 
 
-app = Tk()
+def add_placeholder(entry, placeholder_text):
+    def on_focus_in(event):
+        if entry.get() == placeholder_text:
+            entry.delete(0, tk.END)
+            entry.config(fg='black')
+
+    def on_focus_out(event):
+        if entry.get() == '':
+            entry.insert(0, placeholder_text)
+            entry.config(fg='grey')
+
+    entry.insert(0, placeholder_text)
+    entry.config(fg='grey')
+    entry.bind('<FocusIn>', on_focus_in)
+    entry.bind('<FocusOut>', on_focus_out)
+
+
+app = tk.Tk()
 
 # spiders list
 spider_label = Label(app, text="Choose a spider")
@@ -85,20 +103,22 @@ feed_label.grid(column=0, row=1, sticky=W, padx=10, pady=10)
 
 feed_text = StringVar(app)
 feed_text.set("Choose a feed type")
-feed = ["JSON", "CSV"]
+feed = ["json", "csv"]
 
 feed_dropdown = OptionMenu(app, feed_text, *feed, command=get_chosen_feed)
 feed_dropdown.grid(column=1, row=1, columnspan=2)
 
-# path entry
-folder_path_text = StringVar(app)
-folder_path_entry = Entry(app, textvariable=folder_path_text)
+# Path entry
+folder_path_text = tk.StringVar(app)
+folder_path_entry = tk.Entry(app, textvariable=folder_path_text)
 folder_path_entry.grid(column=0, row=2, padx=10, pady=10)
+add_placeholder(folder_path_entry, "Enter path or browse")
 
-# dataset entry
-dataset_text = StringVar(app)
-dataset_entry = Entry(app, textvariable=dataset_text, width=10)
+# Dataset entry
+dataset_text = tk.StringVar(app)
+dataset_entry = tk.Entry(app, textvariable=dataset_text, width=10)
 dataset_entry.grid(column=1, row=2, padx=10, pady=10)
+add_placeholder(dataset_entry, "listings")
 
 # browse btn
 browse_btn = Button(app, text='Browse', command=browse_button)

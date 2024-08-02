@@ -7,9 +7,8 @@ from scrapy_splash import SplashRequest
 # ctrl + alt + l
 # to format json file on pycharm
 
-
 class ListingsSpider(scrapy.Spider):
-    name = "listings"
+    name = "listings_detailed"
     allowed_domains = ["www.centris.ca"]
 
     # first page on the pagination index
@@ -47,6 +46,7 @@ class ListingsSpider(scrapy.Spider):
         # It contains the following filters:
         # Location: Montréal (Island)
         # Features: 2 beds, 2 baths
+        # Price: $1750 - $2500
         # Category: Residential, for rent
         query = {
             "query": {
@@ -165,10 +165,6 @@ class ListingsSpider(scrapy.Spider):
         # we only need the html response so that we can start scraping
         html = response_dict.get('d').get('Result').get('html')
 
-        # we will scrap this html response, so save it as a separate file for easy lookup
-        # with open('centris.html', 'w') as f:
-        # f.write(html)
-
         # convert the html to a selector object so that we can use xpath. The html is just a string.
         sel = Selector(text=html)
 
@@ -196,7 +192,6 @@ class ListingsSpider(scrapy.Spider):
             # if any(x in address for x in (
             #         'Chemin Bates', 'Avenue Madison', 'boulevard Décarie', 'Place Northcrest', 'Avenue Lennox',
             #         'Place des Jardins-des-Vosges', 'Chemin du Golf', 'Avenue des Pins Ouest', 'Rue Cartier')):
-            # if any(x in address for x in 'zzz'):
             #     pass
             # else:
 
@@ -248,7 +243,10 @@ class ListingsSpider(scrapy.Spider):
         else:
             address = "empty"
 
-        area = response.xpath('//*[@id="overview"]/div[3]/div[1]/div[6]/div[2]/div[2]/span/text()').get()
+        area = response.xpath("//div[@class='col-lg-3 col-sm-6 carac-container' and div[@class='carac-title' and "
+                              "text()='Net area']]//div[@class='carac-value']/span/text()").get()
+        if area is None:
+            area = "Not specified"
 
         description = response.xpath("//div[@itemprop='description']/text()").get()
         if description is not None:

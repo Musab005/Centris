@@ -1,21 +1,27 @@
-# Centris.ca (todo)
-A web scraping project that scrapes rental listings from the Centris.ca website using a web spider that runs on Scrapy. These filters were applied: Montreal, QC, sort by most recent, 2 beds, 2 baths, $1.5k-$2.5k and specific neighbourhood filters...(todo)
+# Centris.ca
+A web scraping project that scrapes rental listings from the Centris.ca website using a web spider that runs on Scrapy. 
+These filters were applied: Location: Montréal (Island). Features: 2 beds, 2 baths. Price: $1750 - $2500. Category: Residential, for rent.
+Two spiders are available, `listings.py` and `listings_detailed.py`.
+The `listings_detailed.py` spider runs a Splash script on top of scrapy to retrieve additional information about the listings that was
+available on the summary webpage of each listing. Splash was used because these web pages had javascript enabled.
 
-## project setup - Scrapy (done)
+## project setup - Scrapy
 1. Install Anaconda from `https://www.anaconda.com/` and create a virtual environment.
-2. Activate your virtual environment from the command line `conda activate {virtual env name}` or through the GUI application.
+2. Activate your virtual environment from the command line `conda activate {virtual env name}` or from the Anaconda GUI application.
 3. Install these packages: `conda install -c conda-forge scrapy`, `conda install -c conda-forge protego`
 4. `git clone` this project to your local machine and open it with your preferred IDE.
 5. On your IDE, set up the python interpreter path to the `python.exe` file located in your anaconda virtual environment directory.
-7. Run the script directly `scrapy crawl listings` from the terminal or `python gui.app.py` to run the GUI application that can be used to run the script.
-8. To get the results as json or csv file, run `scrapy crawl listings -o {file_name}.{json/csv}`. The GUI application will always return a .json or .csv file to the chosen path.
+6. Run the script directly `scrapy crawl listings` from the terminal or `python gui.app.py` to run the GUI application that can be used to run the script.
+7. To get the results as json or csv file, run `scrapy crawl listings -o {file_name}.{json/csv}`.
+The GUI application has an option return a .json or .csv file to the chosen path.
 
-## project setup - Splash (todo)
-Optionally, a Splash script can be executed to retrieve the detailed information that is stored on a webpage that runs javascript. 
+## project setup - Splash
+1. Follow the steps 1-5 from above
+2. Download Docker: https://www.docker.com/products/docker-desktop/
+3. Install Splash from the terminal: `docker pull scrapinghub/splash`
+4. Start the Splash container from the Docker GUI application.
+5. Run the script directly `scrapy crawl listings_detailed` from the terminal or `python gui.app.py` to run the GUI application that can be used to run the script.
+6. To get the results as json or csv file, run `scrapy crawl listings_detailed -o {file_name}.{json/csv}`. 
+The GUI application has an option return a .json or .csv file to the chosen path.
 
-The code that runs the Scrapy + Splash script is pasted in the `splash_working.txt` file. To use that script, simply copy and paste it into the `listings.py` file. (Need to install Splash and Docker to be able to run a Splash script).
-
-A deaktop app GUI is available to facilitate running the script. Simply run `python gui.app.py` from the parent directory.
-
-To run the the spider `listings.py` from the terminal:
 

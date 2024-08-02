@@ -23,87 +23,26 @@ class ListingsSpider(scrapy.Spider):
 
     # code starts executing here
     def start_requests(self):
-        # This variable contains the request payload copied from the XHR request UpdateQuery. It contains the filters.
+        # The query variable contains the request payload copied from the XHR request UpdateQuery.
+        # It contains the following filters:
+        # Location: Montréal (Island)
+        # Features: 2 beds, 2 baths
+        # Price: $1750 - $2500
+        # Category: Residential, for rent
         query = {
             "query": {
                 "UseGeographyShapes": 0,
                 "Filters": [
                     {
-                        "MatchType": "CityDistrict",
-                        "Text": "Montréal (Ville-Marie)",
-                        "Id": 843
-                    },
-                    {
-                        "MatchType": "CityDistrict",
-                        "Text": "Montréal (Verdun/Île-des-Soeurs)",
-                        "Id": 819
-                    },
-                    {
-                        "MatchType": "CityDistrict",
-                        "Text": "Montréal (Rosemont/La Petite-Patrie)",
-                        "Id": 844
-                    },
-                    {
-                        "MatchType": "CityDistrict",
-                        "Text": "Montréal (Le Sud-Ouest)",
-                        "Id": 839
-                    },
-                    {
-                        "MatchType": "CityDistrict",
-                        "Text": "Montréal (Le Plateau-Mont-Royal)",
-                        "Id": 842
-                    },
-                    {
-                        "MatchType": "CityDistrict",
-                        "Text": "Montréal (LaSalle)",
-                        "Id": 820
-                    },
-                    {
-                        "MatchType": "CityDistrict",
-                        "Text": "Montréal (Côte-des-Neiges/Notre-Dame-de-Grâce)",
-                        "Id": 838
+                        "MatchType": "GeographicArea",
+                        "Text": "Montréal (Island)",
+                        "Id": "GSGS4621"
                     }
                 ],
                 "FieldsValues": [
                     {
-                        "fieldId": "CityDistrict",
-                        "value": 843,
-                        "fieldConditionId": "",
-                        "valueConditionId": ""
-                    },
-                    {
-                        "fieldId": "CityDistrict",
-                        "value": 819,
-                        "fieldConditionId": "",
-                        "valueConditionId": ""
-                    },
-                    {
-                        "fieldId": "CityDistrict",
-                        "value": 844,
-                        "fieldConditionId": "",
-                        "valueConditionId": ""
-                    },
-                    {
-                        "fieldId": "CityDistrict",
-                        "value": 839,
-                        "fieldConditionId": "",
-                        "valueConditionId": ""
-                    },
-                    {
-                        "fieldId": "CityDistrict",
-                        "value": 842,
-                        "fieldConditionId": "",
-                        "valueConditionId": ""
-                    },
-                    {
-                        "fieldId": "CityDistrict",
-                        "value": 820,
-                        "fieldConditionId": "",
-                        "valueConditionId": ""
-                    },
-                    {
-                        "fieldId": "CityDistrict",
-                        "value": 838,
+                        "fieldId": "GeographicArea",
+                        "value": "GSGS4621",
                         "fieldConditionId": "",
                         "valueConditionId": ""
                     },
@@ -189,7 +128,7 @@ class ListingsSpider(scrapy.Spider):
         )
 
     def parse(self, response):
-        # the response is a JSON object that is interpreted as a String:
+        # this is the actual response from the get_inscriptions method:
         # {
         #     "d": {
         #         "Message": "",
@@ -199,15 +138,13 @@ class ListingsSpider(scrapy.Spider):
         #         "Succeeded": true
         #     }
         # }
-        # convert it to a python dict:
-        # print(type(response_dict))
-        response_dict = json.loads(response.body)
 
-        # we only need the html response
+        # convert it to a python dict:
+        response_dict = json.loads(response.body)
+        # print(type(response_dict))
+
+        # we only need the html response so that we can start scraping
         html = response_dict.get('d').get('Result').get('html')
-        # we will scrap this html response, so save it as a separate file for easy lookup
-        # with open('centris.html', 'w') as f:
-        #     f.write(html)
 
         # convert the html to a selector object so that we can use xpath. The html is just a string
         sel = Selector(text=html)
@@ -240,15 +177,15 @@ class ListingsSpider(scrapy.Spider):
             summary_url = listing.xpath(
                 './/div[@class="thumbnail property-thumbnail-feature legacy-reset"]/a/@href').get()
             abs_summary_url = f'https://www.centris.ca{summary_url}'
-            # For some reason, I still get the French listings
             abs_summary_url = abs_summary_url.replace('fr', 'en')
 
+            # Use the code below if you need to exclude listings from specific street addresses
             # if any(x in address for x in (
-            #         'Montréal (Mercier/Hochelaga-Maisonneuve)', 'Montréal (Anjou)', 'Montréal (Saint-Laurent)',
-            #         'Montréal (Lachine)', 'Montréal (Villeray/Saint-Michel/Parc-Extension)',
-            #         'Montréal (Pierrefonds-Roxboro)', 'Pointe-Claire', 'Dollard-des-Ormeaux')):
+            #         'Chemin Bates', 'Avenue Madison', 'boulevard Décarie', 'Place Northcrest', 'Avenue Lennox',
+            #         'Place des Jardins-des-Vosges', 'Chemin du Golf', 'Avenue des Pins Ouest', 'Rue Cartier')):
             #     pass
             # else:
+
             yield {
                 'category': category,
                 'features': features,
