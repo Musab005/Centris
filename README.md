@@ -1,6 +1,7 @@
 # Centris.ca
 A web scraping project that scrapes rental listings from the Centris.ca website using a web spider that runs on Scrapy. 
 These filters were applied: Location: Montréal (Island). Features: 2 beds, 2 baths. Price: $1750 - $2500. Category: Residential, for rent.
+
 Two spiders are available, `listings.py` and `listings_detailed.py`.
 The `listings_detailed.py` spider runs a Splash script on top of scrapy to retrieve additional information about the listings that was
 available on the summary webpage of each listing. Splash was used because these web pages had javascript enabled.
