@@ -24,6 +24,7 @@ The GUI application has an option return a .json or .csv file to the chosen path
 5. Run the script directly `scrapy crawl listings_detailed` from the terminal or `python gui.app.py` to run the GUI application that can be used to run the script.
 6. To get the results as json or csv file, run `scrapy crawl listings_detailed -o {file_name}.{json/csv}`. 
 The GUI application has an option return a .json or .csv file to the chosen path.
+
 (Note: The most recent sort filter is not working with Splash)
 
 
