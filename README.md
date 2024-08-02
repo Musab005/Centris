@@ -2,7 +2,7 @@
 A web scraping project that scrapes rental listings from the Centris.ca website using a web spider that runs on Scrapy. These filters were applied: Montreal, QC, sort by most recent, 2 beds, 2 baths, $1.5k-$2.5k and specific neighbourhood filters...(todo)
 
 ## project setup - Scrapy (done)
-1. Install Anaconda from `https://www.anaconda.com/download/success` and create a virtual environment.
+1. Install Anaconda from `https://www.anaconda.com/` and create a virtual environment.
 2. Activate your virtual environment from the command line `conda activate {virtual env name}` or through the GUI application.
 3. Install these packages: `conda install -c conda-forge scrapy`, `conda install -c conda-forge protego`
 4. `git clone` this project to your local machine and open it with your preferred IDE.
