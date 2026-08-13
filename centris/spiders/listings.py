@@ -65,8 +65,8 @@ class ListingsSpider(scrapy.Spider):
                         "valueConditionId": ""
                     },
                     {
-                        "fieldId": "BathPowderRooms",
-                        "value": "2+",
+                        "fieldId": "LivingArea",
+                        "value": "SquareFeet",
                         "fieldConditionId": "IsResidentialNotLot",
                         "valueConditionId": ""
                     },
@@ -78,7 +78,7 @@ class ListingsSpider(scrapy.Spider):
                     },
                     {
                         "fieldId": "RentPrice",
-                        "value": 1750,
+                        "value": 1500,
                         "fieldConditionId": "ForRent",
                         "valueConditionId": ""
                     },
